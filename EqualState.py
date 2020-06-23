@@ -9,10 +9,10 @@ import numpy as np
 def EqualState(x, num_state):
     xs=np.sort(x)
     binlen=int(len(x)/num_state-0.5) #round
-    edges = xs[np.arange(num_state)*binlen]
+    edges = xs[np.arange(num_state+1)*binlen]
     xstate=np.zeros(len(x))
     for i in range(num_state):
         xstate[x>=edges[i]] = i
     xstate = xstate.astype(int)
-    return xstate
+    return xstate, edges
 
