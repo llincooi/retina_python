@@ -1,0 +1,27 @@
+Dear Friends,
+
+ 
+
+Here is the code for the simulation of a moving bar which I talked about
+during the meeting. This is an extension of the model Chou and I developed
+by including spatial dimension.  You can see that the peak will move ahead
+(14 lattice points or 10% of receptive field distance) of the stimulation
+when v= 1.0. If you set v=0.0, you will recover with the famous center
+surround receptive field. I am now using cone and horizontal cells. But it
+could be bipolar and amacrine cell.
+
+ 
+
+I think I will assign the development of this simulation model to David so
+that he can use it to check the results of their OU experiments by using a
+LPOU moving bar. Also, he can further make use of the different pathways of
+the retina to construct realistic model. 
+
+ 
+
+Best Regards
+
+CKC
+
+ 
+
