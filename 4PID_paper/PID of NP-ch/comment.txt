@@ -1,0 +1,2 @@
+It seems NP-ch. encode velocity only when cutoff frequency of stimulus is low. 
+And encode position when cutoff frequency of stimulus is high.

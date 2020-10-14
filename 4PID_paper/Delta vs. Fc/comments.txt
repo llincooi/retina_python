@@ -1,0 +1,2 @@
+I can find a good set of parameter for NGD model that the outcome fits experimental result across different Fc.
+Yet, the set of parameter for NGD model will lead to different delta in r = x+delta*v.
