@@ -1,0 +1,6 @@
+Here are the value of other parameters.
+alpha = 40
+k = 50
+beta = 2* 
+g = 2
+phi = 20
