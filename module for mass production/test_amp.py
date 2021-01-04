@@ -147,7 +147,7 @@ def STcollection(r, x, v, dt, window):
 
 def mass_animate_producer(cutoffFreq, channelnumber):
     exp_folder = 'D:\\GoogleDrive\\retina\\Exps\\2020\\0729'
-    filename = 'merge_0727_OUsmooth_Bright_UL_DR_G4.5_5min_Q100_6.5mW_'+str(cutoffFreq)+'Hz'
+    filename = 'merge_0727_OUsmooth_Bright_UL_DR_G4.5_5min_Q100_6.5mW_'+str(cutoffFreq)+'Hz_re'
     annots = loadmat(exp_folder+'\\merge\\'+filename+'.mat')
     x = np.squeeze(annots['bin_pos'])
     x = x.astype(float)
@@ -160,10 +160,12 @@ def mass_animate_producer(cutoffFreq, channelnumber):
     # In[7]:
     
     
+    annot = loadmat('C:\\Users\\llinc\\GitHub\\retina_personal\\moving_bar_exp_code\\oled_boundary_set.mat')
+    micro_per_pixel = np.squeeze(annot['micro_per_pixel'])
     annot = loadmat('D:\\GoogleDrive\\retina\\Exps\\2020\\0729\\Analyzed_data\\30Hz_27_RF_15min\\unsort\\RF_properties.mat')
     cell_pos = annot['RF_properties'][channelnumber-1,7]+400 #pixel, 400 = MeaCenterX
     cell_pos = (cell_pos-np.mean(x))/np.std(x)
-    RF_radius = annot['RF_properties'][channelnumber-1,6]/annot['micro_per_pixel']/np.std(x)
+    RF_radius = annot['RF_properties'][channelnumber-1,6]/micro_per_pixel/np.std(x)
     
     
     # In[8]:
